@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   root: true,
   env: {
     node: true
@@ -29,3 +29,23 @@ module.exports = {
     }
   ]
 };
+
+// Nextop rules
+[
+  'vue/no-parsing-error',
+  'vue/no-unused-vars',
+  'no-unused-vars',
+  'vue/max-attributes-per-line',
+  'vue/html-closing-bracket-newline',
+  'vue/html-indent',
+  'vue/html-self-closing',
+  'vue/singleline-html-element-content-newline',
+  'vue/require-default-prop',
+  'vue/require-prop-types',
+  'vue/this-in-template',
+  'vue/no-unused-components',
+].forEach(rule => {
+  config.rules[rule] = 'off';
+});
+
+module.exports = config;
