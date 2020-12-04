@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="the-index">
     <TheHeader />
     <TheMenu />
     <TheContent />
@@ -19,4 +19,24 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style lang="less">
+#the-index {
+  display: grid;
+  grid-auto-columns: 200px 1fr;
+  grid-template-areas:
+    'TheHeader TheHeader'
+    'TheMenu TheContent';
+}
+
+#the-header {
+  grid-area: TheHeader;
+}
+
+#the-menu {
+  grid-area: TheMenu;
+}
+
+#the-content {
+  grid-area: TheContent;
+}
+</style>

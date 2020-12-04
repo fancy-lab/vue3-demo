@@ -1,5 +1,9 @@
 <template>
-  <div id="the-header">header</div>
+  <div id="the-header">
+    <div class="c-title">
+      Nextop Admin [Vue3]
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -11,7 +15,10 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-.the-header {
+#the-header {
   background-color: green;
+  height: 38px;
+  display: flex;
+  align-items: center;
 }
 </style>

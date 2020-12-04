@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-.the-menu {
+#the-menu {
   background-color: #7373e9;
 }
 </style>

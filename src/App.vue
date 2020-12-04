@@ -1,8 +1,6 @@
 <template>
   <!--  <n-config-provider>-->
-  <div id="app">
-    <router-view />
-  </div>
+  <router-view />
   <!--  </n-config-provider>-->
 </template>
 

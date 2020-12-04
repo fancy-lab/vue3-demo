@@ -1,0 +1,48 @@
+//recommend
+//background: linear-gradient(to right, #a22515, #f35b67);
+
+.nav-prod-mixin(
+  @header-from-color: #b22222;
+  @header-to-color: #ff0000;
+  @app-env-color: #fff;
+  @app-title-color: #fff;
+  @app-version-color: #fff;
+  @action-icon-color: #fff;
+  @action-hover-color: #ff0000;
+) {
+  background-image: linear-gradient(to bottom, @header-from-color 0%, @header-to-color 100%);
+
+  .app-title {
+    font-weight: bold;
+    opacity: 1 !important;
+    color: @app-title-color !important;
+  }
+
+  .app-env {
+    opacity: 1 !important;
+    color: @app-env-color !important;
+  }
+
+  .app-build {
+    opacity: 1 !important;
+    color: @app-version-color !important;
+  }
+
+  .nav-actions {
+    .icon-btn {
+      opacity: 0.9 !important;
+      padding: 0 16px;
+      color: @action-icon-color !important;
+      background-image: linear-gradient(to bottom, @header-from-color 0%, @header-to-color 100%);
+
+      &:hover {
+        opacity: 1 !important;
+        background-image: none;
+        background-color: @action-hover-color;
+      }
+    }
+  }
+}
+.nav-prod {
+  .nav-prod-mixin();
+}

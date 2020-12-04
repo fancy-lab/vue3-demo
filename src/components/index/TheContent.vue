@@ -14,7 +14,7 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-.the-content {
+#the-content {
   background-color: yellow;
 }
 </style>

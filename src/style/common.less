@@ -1,0 +1,252 @@
+// Admin Global Style
+@import "config";
+
+* {
+  outline: none !important;
+}
+
+html, body {
+  //font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.loopStyle(@counter) when (@counter > -1) {
+  .p-@{counter} {
+    padding: (4px * @counter) !important;
+  }
+  .px-@{counter} {
+    padding-left: (4px * @counter) !important;
+    padding-right: (4px * @counter) !important;
+  }
+  .py-@{counter} {
+    padding-top: (4px * @counter) !important;
+    padding-bottom: (4px * @counter) !important;
+  }
+  .pt-@{counter} {
+    padding-top: (4px * @counter) !important;
+  }
+  .pr-@{counter} {
+    padding-right: (4px * @counter) !important;
+  }
+  .pb-@{counter} {
+    padding-bottom: (4px * @counter) !important;
+  }
+  .pl-@{counter} {
+    padding-left: (4px * @counter) !important;
+  }
+  .m-@{counter} {
+    margin: (4px * @counter) !important;
+  }
+  .mx-@{counter} {
+    margin-left: (4px * @counter) !important;
+    margin-right: (4px * @counter) !important;
+  }
+  .my-@{counter} {
+    margin-top: (4px * @counter) !important;
+    margin-bottom: (4px * @counter) !important;
+  }
+  .mt-@{counter} {
+    margin-top: (4px * @counter) !important;
+  }
+  .mr-@{counter} {
+    margin-right: (4px * @counter) !important;
+  }
+  .mb-@{counter} {
+    margin-bottom: (4px * @counter) !important;
+  }
+  .ml-@{counter} {
+    margin-left: (4px * @counter) !important;
+  }
+  .width-@{counter} {
+    width: (4px * @counter) !important;
+  }
+  .height-@{counter} {
+    height: (4px * @counter) !important;
+  }
+  .loopStyle((@counter - 1));
+}
+
+.loopStyle(50);
+
+.width-single-sc {
+  width: 230px !important;
+}
+
+.n-no-select {
+  user-select: none;
+}
+
+.n-info {
+  color: @primary-color !important;
+}
+
+.n-success {
+  color: @success-color !important;
+}
+
+.n-warning {
+  color: @warning-color !important;
+}
+
+.n-error {
+  color: @error-color !important;
+}
+
+.n-link {
+  color: @primary-color !important;
+  cursor: pointer;
+  text-decoration: unset;
+
+  &:hover {
+    color: @primary-light !important;
+  }
+}
+
+.n-span-ellipsis {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
+  .n-ellipsis();
+}
+
+.n-transparent {
+  opacity: 0;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  border-left: 0;
+  background-image: linear-gradient(to top, whitesmoke, white);
+}
+
+::-webkit-scrollbar:vertical {
+  width: 6px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.n-button-box {
+  button, span {
+    margin-right: 4px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.n-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+[data-btn-action="sort"] {
+  &:hover {
+    cursor: move;
+  }
+
+  &:disabled:hover {
+    cursor: not-allowed;
+  }
+}
+
+.n-scrollbar {
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    border-left: 0;
+    background-image: linear-gradient(to top, whitesmoke, white);
+  }
+
+  ::-webkit-scrollbar:vertical {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(51, 51, 51, 0.5);
+  }
+}
+
+// START flex
+.n-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.n-flex-start {
+  justify-content: flex-start;
+}
+
+.n-flex-center {
+  justify-content: center;
+}
+
+.n-flex-end {
+  justify-content: end;
+}
+
+.n-flex-space-around {
+  justify-content: space-around;
+}
+
+.n-flex-space-between {
+  justify-content: space-between;
+}
+
+.n-flex-vertical-top {
+  align-items: flex-start;
+}
+
+.n-flex-vertical-center {
+  align-items: center;
+}
+
+.n-flex-vertical-bottom {
+  align-items: flex-end;
+}
+
+.n-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.n-col-1 {
+  flex: 1;
+}
+
+.n-col-2 {
+  flex: 2;
+}
+
+.n-col-3 {
+  flex: 3;
+}
+
+.n-col-4 {
+  flex: 4;
+}
+
+.n-col-5 {
+  flex: 5;
+}
+// END flex
+
+.n-will-change {
+  will-change: left, top;
+}
