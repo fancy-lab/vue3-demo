@@ -1,7 +1,7 @@
 <template>
   <div id="the-header">
     <div class="c-title">
-      Nextop Admin [Vue3]
+      Admin [Vue3]
     </div>
   </div>
 </template>
