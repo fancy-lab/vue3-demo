@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 interface Menu {
   name: string;
@@ -18,17 +18,26 @@ export default defineComponent({
   name: 'TheMenu',
 
   setup() {
-    const menus: Menu[] = [{ name: 'ref', url: '/ref' }];
-    const selectedKeys = [menus[0].name];
+    const menus: Menu[] = [
+      { name: 'v-for Array Refs', url: '/ref' },
+      { name: 'Async Components', url: '/async-components' },
+    ];
+    const selectedKeys = ref([menus[0].name]);
+
+    function setSelectedKey(key: string) {
+      selectedKeys.value[0] = key;
+    }
 
     return {
       selectedKeys,
+      setSelectedKey,
       menus,
     };
   },
 
   methods: {
     goto(menu: Menu) {
+      this.setSelectedKey(menu.name);
       this.$router.push(menu.url);
     },
   },

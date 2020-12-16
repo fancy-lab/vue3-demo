@@ -13,6 +13,10 @@ const INDEX_ROUTES = [
     path: '/ref',
     component: () => import('@/views/index/lab/demos/ref.vue'),
   },
+  {
+    path: '/async-components',
+    component: () => import('@/views/index/lab/demos/async-components.vue'),
+  },
 ];
 
 const routes: Array<RouteRecordRaw> = [

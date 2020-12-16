@@ -25,25 +25,31 @@ const useItems = () => {
   };
 };
 
+const useRefs = () => {
+  let itemRefs: unknown[] = [];
+
+  const setItemRef = (el: unknown) => {
+    itemRefs.push(el);
+  };
+
+  onBeforeUpdate(() => {
+    itemRefs = [];
+  });
+
+  onUpdated(() => {
+    console.log(itemRefs);
+  });
+
+  return {
+    itemRefs,
+    setItemRef,
+  };
+};
+
 export default defineComponent({
   setup() {
-    let itemRefs: unknown[] = [];
-
-    const setItemRef = (el: unknown) => {
-      itemRefs.push(el);
-    };
-
-    onBeforeUpdate(() => {
-      itemRefs = [];
-    });
-
-    onUpdated(() => {
-      console.log(itemRefs);
-    });
-
     return {
-      itemRefs,
-      setItemRef,
+      ...useRefs(),
       ...useItems(),
     };
   },
