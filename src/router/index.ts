@@ -3,18 +3,15 @@ import Index from '@/views/index/index.vue';
 
 const INDEX_ROUTES = [
   {
-    path: '/market/market',
+    path: '/lab',
     meta: {
-      name: 'market',
+      name: 'lab',
     },
-    component: () => import('@/views/index/market/Market.vue'),
+    component: () => import('@/views/index/lab/Lab.vue'),
   },
   {
-    path: '/market/symbol',
-    meta: {
-      name: 'symbol',
-    },
-    component: () => import('@/views/index/market/Symbol.vue'),
+    path: '/ref',
+    component: () => import('@/views/index/lab/demos/ref.vue'),
   },
 ];
 
@@ -24,6 +21,10 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Index',
     component: Index,
     children: INDEX_ROUTES,
+  },
+  {
+    path: '/*',
+    redirect: '/lab',
   },
 ];
 

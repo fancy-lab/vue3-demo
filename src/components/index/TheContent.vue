@@ -1,6 +1,5 @@
 <template>
   <div id="the-content">
-    content
     <router-view />
   </div>
 </template>
@@ -15,6 +14,8 @@ export default defineComponent({
 
 <style lang="less">
 #the-content {
-  background-color: yellow;
+  border: 10px solid #f0f0f0;
+  padding: 5px;
+  height: calc(100vh - 38px);
 }
 </style>
