@@ -5,17 +5,30 @@ const INDEX_ROUTES = [
   {
     path: '/lab',
     meta: {
-      name: 'lab',
+      name: 'Lab',
     },
     component: () => import('@/views/index/lab/Lab.vue'),
   },
   {
     path: '/ref',
+    meta: {
+      name: 'Ref',
+    },
     component: () => import('@/views/index/lab/demos/ref.vue'),
   },
   {
     path: '/async-components',
+    meta: {
+      name: 'Async Components',
+    },
     component: () => import('@/views/index/lab/demos/async-components.vue'),
+  },
+  {
+    path: '/others',
+    meta: {
+      name: 'Others',
+    },
+    component: () => import('@/views/index/lab/demos/others.vue'),
   },
 ];
 
@@ -37,4 +50,5 @@ const router = createRouter({
   routes,
 });
 
+export { INDEX_ROUTES as routers };
 export default router;

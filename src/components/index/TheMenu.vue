@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import { routers } from '@/router';
 
 interface Menu {
   name: string;
@@ -18,10 +19,10 @@ export default defineComponent({
   name: 'TheMenu',
 
   setup() {
-    const menus: Menu[] = [
-      { name: 'v-for Array Refs', url: '/ref' },
-      { name: 'Async Components', url: '/async-components' },
-    ];
+    const menus: Menu[] = [];
+    routers.forEach(({ meta: { name }, path: url }) => {
+      menus.push({ name, url });
+    });
     const selectedKeys = ref([menus[0].name]);
 
     function setSelectedKey(key: string) {
