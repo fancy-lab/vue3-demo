@@ -11,5 +11,13 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Lab',
+
+  renderTracked({ key, target, type }) {
+    console.log('renderTracked', { key, target, type });
+  },
+
+  renderTriggered({ key, target, type }) {
+    console.log('renderTriggered', { key, target, type });
+  },
 });
 </script>
