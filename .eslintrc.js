@@ -44,6 +44,7 @@ const config = {
   'vue/require-prop-types',
   'vue/this-in-template',
   'vue/no-unused-components',
+  '@typescript-eslint/no-unused-vars',
 ].forEach(rule => {
   config.rules[rule] = 'off';
 });
