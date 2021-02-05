@@ -31,6 +31,13 @@ const INDEX_ROUTES = [
     component: () => import('@/views/index/lab/demos/async-components.vue'),
   },
   {
+    path: '/attrs',
+    meta: {
+      name: 'Attrs',
+    },
+    component: () => import('@/views/index/lab/demos/attrs.vue'),
+  },
+  {
     path: '/others',
     meta: {
       name: 'Others',
