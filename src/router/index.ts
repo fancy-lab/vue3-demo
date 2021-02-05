@@ -17,6 +17,13 @@ const INDEX_ROUTES = [
     component: () => import('@/views/index/lab/demos/ref.vue'),
   },
   {
+    path: '/setup',
+    meta: {
+      name: 'Setup',
+    },
+    component: () => import('@/views/index/lab/demos/setup.vue'),
+  },
+  {
     path: '/async-components',
     meta: {
       name: 'Async Components',
